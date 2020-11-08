@@ -16,7 +16,7 @@
 <?php $it = new FilesystemIterator(dirname(__FILE__) . '/uploads'); ?>
     <figure>
         <?php foreach ($it as $fileInfo) : ?>
-            <img src="<?= $fileInfo->getPathname() ?>" alt="<?= $fileInfo ?>" width="300px" height="auto">
+            <img src="/uploads/<?= $fileInfo->getFilename() ?>" alt="<?= $fileInfo->getFilename() ?>" width="300px" height="auto">
             <figcaption>
             <?= $fileInfo->getFilename() . "<br>"; ?>
             </figcaption>
