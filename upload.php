@@ -20,6 +20,10 @@
             <figcaption>
             <?= $fileInfo->getFilename() . "<br>"; ?>
             </figcaption>
+            <form action="/delete.php" method="post">
+                <input type="hidden" value="<?= $fileInfo->getFilename(); ?>" name="deleteFile">
+                <button>Delete</button>
+            </form>
         <?php endforeach; ?>
     </figure>
 
